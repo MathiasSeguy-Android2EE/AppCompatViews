@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txvHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imvLogo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/txvHello"
+        app:layout_constraintTop_toTopOf="@id/txvHello"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:background="@color/colorAccent"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/imbHello"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="@+id/txvHello"
+        app:layout_constraintRight_toRightOf="@+id/txvHello"
+        app:layout_constraintTop_toBottomOf="@id/txvHello"
+        app:layout_constraintBottom_toBottomOf="@+id/imvLogo"
+        android:text="Hello World!"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imvLogoVector"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="15dp"
+        app:layout_constraintLeft_toRightOf="@id/txvHello"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txvHello"
+        app:layout_constraintBottom_toBottomOf="@+id/imvLogo"
+        app:srcCompat="@drawable/ic_android_black"
+        android:background="@color/colorAccent"/>
+    <!--EditText Chain Example-->
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Bla BlaBla"
+        android:inputType="textAutoComplete|textEmailAddress"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/edtFirstName"
+        app:layout_constraintTop_toBottomOf="@id/imvLogo" />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtFirstName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="FirstName"
+        android:gravity="center"
+        android:inputType="textAutoComplete|textEmailAddress"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintLeft_toRightOf="@+id/edtName"
+        app:layout_constraintRight_toLeftOf="@+id/edtNickName"
+        app:layout_constraintTop_toTopOf="@+id/edtName"
+        />
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtNickName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="NickName"
+        android:gravity="center"
+        android:inputType="textAutoComplete|textEmailAddress"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintLeft_toRightOf="@+id/edtFirstName"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/edtName"
+        />
+    <!--ImageButton Chain Example-->
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ibtnBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/ibtnBookmark"
+        app:layout_constraintTop_toBottomOf="@id/edtName"
+        app:srcCompat="@drawable/ic_book"
+        android:background="#FF0000"
+        app:layout_constraintDimensionRatio="1:1"/>
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ibtnBookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/ibtnBook"
+        app:layout_constraintRight_toLeftOf="@+id/ibtnBookmarkBorder"
+        app:layout_constraintTop_toTopOf="@+id/ibtnBook"
+        app:srcCompat="@drawable/ic_bookmark"
+        android:background="#00FF00"
+        app:layout_constraintDimensionRatio="1:1"
+        />
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ibtnBookmarkBorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@+id/ibtnBookmark"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ibtnBook"
+        app:srcCompat="@drawable/ic_bookmark_border"
+        android:background="#0000FF"
+        app:layout_constraintDimensionRatio="1:1"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
